@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {  
+      "noImplicitAny": true,
+      "module": "commonjs",
+      "target": "es6",
+      "jsx": "preserve",
+      "lib": ["dom", "es2015", "es2017"],
+      "strict": true,
+      "noEmit": true,
+      "isolatedModules": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "removeComments": false,
+      "sourceMap": true,
+      "jsxImportSource": "@emotion/react",
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules", "public"],
+}
