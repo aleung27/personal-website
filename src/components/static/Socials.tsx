@@ -1,17 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
-import { css } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 import { Colours } from "../../util/constants";
 import ReactTooltip, { Place } from "react-tooltip";
-
 interface Props {
   tooltipDirection: Place;
+  style?: SerializedStyles;
 }
 
-const Socials = ({ tooltipDirection }: Props) => {
+const Socials = ({ tooltipDirection, style }: Props) => {
   return (
-    <div css={styles.socials}>
+    <div css={[styles.socials, style]}>
       <a
         href="mailto:adamjleung123@gmail.com"
         target="_blank"
@@ -28,7 +28,7 @@ const Socials = ({ tooltipDirection }: Props) => {
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
-        data-tip="Visit my Github Profile"
+        data-tip="Visit my Github"
       >
         <FontAwesomeIcon icon={faGithubSquare} size="2x" css={styles.icon} />
       </a>
@@ -39,7 +39,7 @@ const Socials = ({ tooltipDirection }: Props) => {
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
-        data-tip="Visit my LinkedIn Profile"
+        data-tip="Visit my LinkedIn"
       >
         <FontAwesomeIcon icon={faLinkedin} size="2x" css={styles.icon} />
       </a>

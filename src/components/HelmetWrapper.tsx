@@ -1,8 +1,12 @@
 import { Helmet } from "react-helmet";
 
 const HelmetWrapper = () => {
-  const fonts = `body {
-    font-family: 'Roboto', sans-serif; 
+  const bodyCss = `body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: #fbfbf8;
+    color: #000000;
   }`;
 
   return (
@@ -21,7 +25,7 @@ const HelmetWrapper = () => {
       />
       {/*TODO: Change this to your site's URL & Icon*/}
 
-      <style>{fonts}</style>
+      <style>{bodyCss}</style>
     </Helmet>
   );
 };
