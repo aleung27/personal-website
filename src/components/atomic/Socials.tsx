@@ -4,6 +4,7 @@ import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { css, SerializedStyles } from "@emotion/react";
 import { Colours } from "../../util/constants";
 import ReactTooltip, { Place } from "react-tooltip";
+
 interface Props {
   tooltipDirection: Place;
   style?: SerializedStyles;

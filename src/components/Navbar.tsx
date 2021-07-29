@@ -2,7 +2,7 @@
 import { css } from "@emotion/react";
 import { Colours, Sizes } from "../util/constants";
 import React, { useState, useEffect } from "react";
-import Socials from "./static/Socials";
+import Socials from "./atomic/Socials";
 
 const Navbar = () => {
   const [path, setPath] = useState<string>("");
