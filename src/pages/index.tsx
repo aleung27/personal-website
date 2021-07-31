@@ -5,6 +5,7 @@ import { css } from "@emotion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Colours, Sizes } from "../util/constants";
+import Header from "../components/atomic/Header";
 
 const Index = () => {
   return (
@@ -38,6 +39,10 @@ const Index = () => {
         </span>
       </div>
 
+      <div css={styles.header}>
+        <Header text="Professional Portfolio" />
+      </div>
+
       <div style={{ height: 1000, paddingTop: "10vh" }}>
         My first React.js page!
       </div>
@@ -64,6 +69,13 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+  }),
+  header: css({
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "5em 0",
   }),
 };
 

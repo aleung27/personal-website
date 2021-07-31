@@ -68,6 +68,7 @@ const styles = {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
+    zIndex: 3,
   }),
   blur: css({
     position: "fixed",
@@ -76,7 +77,7 @@ const styles = {
     height: "10vh",
     backgroundColor: Colours.header,
     filter: "blur(100px)",
-    zIndex: -10,
+    zIndex: 2,
   }),
   title: css({
     fontWeight: "bold",
