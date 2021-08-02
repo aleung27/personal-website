@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Colours } from "../../util/constants";
+import { Colours, Sizes } from "../../util/constants";
 
 interface Props {
   tag: string;
@@ -15,6 +15,8 @@ const styles = {
     backgroundColor: Colours.gray2,
     borderRadius: "8px",
     padding: "5px 10px",
+    margin: "0 5px",
+    fontSize: Sizes.small,
   }),
 };
 
