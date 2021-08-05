@@ -6,11 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Colours, Sizes } from "../util/constants";
 import Header from "../components/atomic/Header";
-import ImageCard from "../components/atomic/ImageCard";
-import Tag from "../components/atomic/Tag";
-
-import builtview1 from "../images/builtview-1.png";
-import Panel from "../components/Panel";
+import { Portfolio } from "../components/data/PanelConstants";
 
 const Index = () => {
   return (
@@ -48,17 +44,7 @@ const Index = () => {
         <Header text="Professional Portfolio" />
       </div>
 
-      <ImageCard image={builtview1} width={600} />
-      <Tag tag="Web App" />
-      <Panel
-        title="Builtview"
-        subtitle="Laing O'Rourke Australia"
-        tags={["Web App", "API", "React", "TypeScript", "C#", ".NET Core"]}
-        images={[builtview1]}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Blandit volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Quam quisque id diam vel quam. Consectetur libero id faucibus nisl tincidunt eget nullam. Aliquet porttitor lacus luctus accumsan tortor posuere ac. A scelerisque purus semper eget. Eget aliquet nibh praesent tristique magna sit amet purus. Non consectetur a erat nam at lectus urna duis convallis. Et netus et malesuada fames ac turpis egestas maecenas. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. Lacus vestibulum sed arcu non odio euismod lacinia at quis. Fringilla urna porttitor rhoncus dolor purus non enim praesent. Molestie at elementum eu facilisis sed odio morbi. Vitae elementum curabitur vitae nunc sed. Diam donec adipiscing tristique risus nec feugiat in. Neque laoreet suspendisse interdum consectetur libero id faucibus."
-        descriptionHeading="Photo and Video Capture for Construction Sites"
-        display="row"
-      />
+      {Portfolio}
 
       <div style={{ height: 1000, paddingTop: "10vh" }}>
         My first React.js page!

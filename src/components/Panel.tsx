@@ -9,7 +9,7 @@ interface Props {
   tags: string[];
   images: string[];
   descriptionHeading?: string;
-  description: string;
+  children: React.ReactNode;
   display: "column" | "row";
 }
 
@@ -19,7 +19,7 @@ const Panel = ({
   tags,
   images,
   descriptionHeading,
-  description,
+  children,
   display,
 }: Props) => {
   return (
@@ -35,11 +35,11 @@ const Panel = ({
         {!!descriptionHeading && (
           <div css={styles.descriptionHeading}> {descriptionHeading} </div>
         )}
-        <div css={styles.description}>{description}</div>
+        <div css={styles.description}>{children}</div>
       </div>
       <div css={styles.images}>
         {images.map((i) => (
-          <ImageCard image={i} width={700}></ImageCard>
+          <ImageCard image={i} />
         ))}
       </div>
     </div>
