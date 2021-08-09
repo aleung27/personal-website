@@ -7,6 +7,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Colours, Sizes } from "../util/constants";
 import Header from "../components/atomic/Header";
 import { Portfolio, Projects } from "../components/data/PanelConstants";
+import Footer from "../components/Footer";
 
 const Index = () => {
   return (
@@ -51,6 +52,16 @@ const Index = () => {
       </div>
 
       <div css={styles.project}>{Projects}</div>
+
+      <div css={styles.ending}>
+        Want to read more? Check out some of my{" "}
+        <a href="/blog" target="_self" rel="noopener noreferrer external">
+          Blog
+        </a>{" "}
+        posts too!
+      </div>
+
+      <Footer />
     </div>
   );
 };
@@ -85,6 +96,12 @@ const styles = {
   project: css({
     display: "grid",
     gridTemplateColumns: "1fr 1fr",
+  }),
+  ending: css({
+    textAlign: "center",
+    fontWeight: 400,
+    fontSize: Sizes.large,
+    padding: "5em 0",
   }),
 };
 

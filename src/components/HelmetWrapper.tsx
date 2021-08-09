@@ -5,6 +5,7 @@ const HelmetWrapper = () => {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    font-weight: 400;
     background-color: #fbfbf8;
     color: #000000;
   }`;
