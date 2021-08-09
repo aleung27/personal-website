@@ -9,6 +9,7 @@ interface Props {
   tags: string[];
   images: string[];
   descriptionHeading?: string;
+  links?: JSX.Element[];
   children: React.ReactNode;
   display: "column" | "row";
 }
@@ -19,11 +20,19 @@ const Panel = ({
   tags,
   images,
   descriptionHeading,
+  links,
   children,
   display,
 }: Props) => {
   return (
     <div css={styles.panel(display)}>
+      {display === "column" && (
+        <div css={[styles.images, styles.columnImage]}>
+          {images.map((i) => (
+            <ImageCard image={i} />
+          ))}
+        </div>
+      )}
       <div css={styles.information}>
         <div css={styles.title}>
           {title}
@@ -31,17 +40,22 @@ const Panel = ({
             <Tag tag={t} />
           ))}
         </div>
-        <div css={styles.subtitle}> {subtitle} </div>
+        <div css={styles.subtitle}>
+          {subtitle}
+          {links}
+        </div>
         {!!descriptionHeading && (
           <div css={styles.descriptionHeading}> {descriptionHeading} </div>
         )}
         <div css={styles.description}>{children}</div>
       </div>
-      <div css={styles.images}>
-        {images.map((i) => (
-          <ImageCard image={i} />
-        ))}
-      </div>
+      {display === "row" && (
+        <div css={styles.images}>
+          {images.map((i) => (
+            <ImageCard image={i} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
@@ -49,6 +63,7 @@ const Panel = ({
 const styles = {
   panel: (display: "column" | "row") =>
     css({
+      padding: "2em 0",
       display: "flex",
       flexDirection: display,
       alignItems: "center",
@@ -80,6 +95,7 @@ const styles = {
     fontSize: Sizes.med,
   }),
   images: css({}),
+  columnImage: css({ paddingBottom: "5em" }),
 };
 
 export default Panel;

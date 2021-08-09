@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Colours, Sizes } from "../util/constants";
 import Header from "../components/atomic/Header";
-import { Portfolio } from "../components/data/PanelConstants";
+import { Portfolio, Projects } from "../components/data/PanelConstants";
 
 const Index = () => {
   return (
@@ -46,9 +46,11 @@ const Index = () => {
 
       {Portfolio}
 
-      <div style={{ height: 1000, paddingTop: "10vh" }}>
-        My first React.js page!
+      <div css={styles.header}>
+        <Header text="Personal Projects" />
       </div>
+
+      <div css={styles.project}>{Projects}</div>
     </div>
   );
 };
@@ -78,7 +80,11 @@ const styles = {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    padding: "5em 0",
+    padding: "10em 0",
+  }),
+  project: css({
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr",
   }),
 };
 
