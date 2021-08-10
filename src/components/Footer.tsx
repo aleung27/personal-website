@@ -14,7 +14,7 @@ const Footer = () => {
       >
         Take me back up <FontAwesomeIcon icon={faChevronUp} />
       </div>
-      <Socials tooltipDirection="top" style={css({ paddingRight: "3rem" })} />
+      <Socials style={css({ paddingRight: "3rem" })} />
     </div>
   );
 };
@@ -27,9 +27,18 @@ const styles = {
     alignItems: "center",
     width: "100%",
     height: "10vh",
+    "&:before": {
+      content: '""',
+      background: Colours.header,
+      position: "absolute",
+      height: "10vh",
+      width: "100%",
+      filter: `blur(50px)`,
+      zIndex: -1,
+    },
   }),
   copyright: css({
-    fontSize: Sizes.large,
+    fontSize: Sizes.med,
     color: Colours.gray4,
     paddingLeft: "3rem",
   }),

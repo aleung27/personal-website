@@ -3,14 +3,12 @@ import { faLinkedin, faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { css, SerializedStyles } from "@emotion/react";
 import { Colours } from "../../util/constants";
-import ReactTooltip, { Place } from "react-tooltip";
 
 interface Props {
-  tooltipDirection: Place;
   style?: SerializedStyles;
 }
 
-const Socials = ({ tooltipDirection, style }: Props) => {
+const Socials = ({ style }: Props) => {
   return (
     <div css={[styles.socials, style]}>
       <a
@@ -22,7 +20,6 @@ const Socials = ({ tooltipDirection, style }: Props) => {
       >
         <FontAwesomeIcon icon={faEnvelopeSquare} size="2x" css={styles.icon} />
       </a>
-      <ReactTooltip place={tooltipDirection} type="dark" effect="solid" />
 
       <a
         href="https://www.github.com/aleung27"
@@ -33,7 +30,6 @@ const Socials = ({ tooltipDirection, style }: Props) => {
       >
         <FontAwesomeIcon icon={faGithubSquare} size="2x" css={styles.icon} />
       </a>
-      <ReactTooltip place={tooltipDirection} type="dark" effect="solid" />
 
       <a
         href="https://www.linkedin.com/in/adam-leung-ba5796182"
@@ -44,7 +40,6 @@ const Socials = ({ tooltipDirection, style }: Props) => {
       >
         <FontAwesomeIcon icon={faLinkedin} size="2x" css={styles.icon} />
       </a>
-      <ReactTooltip place={tooltipDirection} type="dark" effect="solid" />
     </div>
   );
 };

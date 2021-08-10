@@ -48,12 +48,8 @@ const Navbar = () => {
           </a>
         </div>
 
-        <Socials
-          tooltipDirection="bottom"
-          style={css({ paddingRight: "3rem" })}
-        />
+        <Socials style={css({ paddingRight: "3rem" })} />
       </nav>
-      <div css={styles.blur} />
     </>
   );
 };
@@ -69,15 +65,15 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     zIndex: 3,
-  }),
-  blur: css({
-    position: "fixed",
-    top: 0,
-    width: "100%",
-    height: "10vh",
-    backgroundColor: Colours.header,
-    filter: "blur(100px)",
-    zIndex: 2,
+    "&:before": {
+      content: '""',
+      background: Colours.header,
+      position: "absolute",
+      height: "10vh",
+      width: "100%",
+      filter: `blur(50px)`,
+      zIndex: -1,
+    },
   }),
   title: css({
     fontWeight: "bold",
