@@ -1,6 +1,7 @@
 import { css } from "@emotion/react";
 import Header from "../components/atomic/Header";
 import Profile from "../components/atomic/Profile";
+import { Timeline } from "../components/data/TimeLineConstants";
 import Footer from "../components/Footer";
 import HelmetWrapper from "../components/HelmetWrapper";
 import Navbar from "../components/Navbar";
@@ -26,6 +27,8 @@ const About = () => {
       <div css={styles.header}>
         <Header text="Education" />
       </div>
+
+      {Timeline}
 
       <Footer />
     </div>
