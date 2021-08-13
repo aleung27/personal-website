@@ -29,7 +29,7 @@ const Panel = ({
       {display === "column" && (
         <div css={[styles.images, styles.columnImage]}>
           {images.map((i) => (
-            <ImageCard image={i} />
+            <ImageCard image={i} key={i} />
           ))}
         </div>
       )}
@@ -37,7 +37,7 @@ const Panel = ({
         <div css={styles.title}>
           {title}
           {tags.map((t) => (
-            <Tag tag={t} />
+            <Tag tag={t} key={t} />
           ))}
         </div>
         <div css={styles.subtitle}>
@@ -52,7 +52,7 @@ const Panel = ({
       {display === "row" && (
         <div css={styles.images}>
           {images.map((i) => (
-            <ImageCard image={i} />
+            <ImageCard image={i} key={i} />
           ))}
         </div>
       )}

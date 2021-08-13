@@ -39,6 +39,7 @@ export const Portfolio = [
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
+        key={1}
       >
         <FontAwesomeIcon icon={faLink} size="sm" />
       </a>,
@@ -71,7 +72,7 @@ export const Portfolio = [
       learnt React and C# all while studying at uni too!
     </p>
 
-    <p>
+    <div>
       Some of the real standout features I implemented from my time here
       include:
       <ul>
@@ -88,7 +89,7 @@ export const Portfolio = [
           data loss and downtime
         </li>
       </ul>
-    </p>
+    </div>
   </Panel>,
   <Panel
     key={2}
@@ -103,6 +104,7 @@ export const Portfolio = [
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
+        key={1}
       >
         <FontAwesomeIcon icon={faAppStoreIos} size="sm" />
       </a>,
@@ -111,6 +113,7 @@ export const Portfolio = [
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
+        key={2}
       >
         <FontAwesomeIcon icon={faGooglePlay} size="sm" />
       </a>,
@@ -140,7 +143,7 @@ export const Portfolio = [
       compared to typical web apps!
     </p>
 
-    <p>
+    <div>
       Some of the cool features I got to work on included:
       <ul>
         <li style={{ margin: "0.5em 0" }}>
@@ -152,7 +155,7 @@ export const Portfolio = [
           JaveScript pre-compiler
         </li>
       </ul>
-    </p>
+    </div>
   </Panel>,
   <Panel
     key={3}
@@ -182,7 +185,7 @@ export const Portfolio = [
       that I was there.
     </p>
 
-    <p>
+    <div>
       Some of the main features I worked on included:
       <ul>
         <li style={{ margin: "0.5em 0" }}>
@@ -197,13 +200,13 @@ export const Portfolio = [
           Lots of refactoring and documentation of old code!
         </li>
       </ul>
-    </p>
+    </div>
   </Panel>,
 ];
 
 export const Projects = [
   <Panel
-    key={1}
+    key={4}
     title="VLC Media Player"
     subtitle="VideoLAN Organisation"
     tags={["Desktop", "C++", "Qt"]}
@@ -214,6 +217,7 @@ export const Projects = [
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
+        key={1}
       >
         <FontAwesomeIcon icon={faGitAlt} size="sm" />
       </a>,
@@ -247,7 +251,7 @@ export const Projects = [
     </p>
   </Panel>,
   <Panel
-    key={2}
+    key={5}
     title="VS Statuses"
     subtitle="Visual Studio Code"
     tags={["Extension", "API", "Typescript"]}
@@ -258,6 +262,7 @@ export const Projects = [
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
+        key={1}
       >
         <FontAwesomeIcon icon={faCode} size="sm" />
       </a>,
@@ -266,6 +271,7 @@ export const Projects = [
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
+        key={2}
       >
         <FontAwesomeIcon icon={faGithubSquare} size="sm" />
       </a>,
