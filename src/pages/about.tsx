@@ -1,11 +1,13 @@
 import { css } from "@emotion/react";
 import Header from "../components/atomic/Header";
+import LanguageSquare from "../components/atomic/LanguageSquare";
 import Profile from "../components/atomic/Profile";
 import { Timeline } from "../components/data/TimeLineConstants";
 import Footer from "../components/Footer";
 import HelmetWrapper from "../components/HelmetWrapper";
 import Navbar from "../components/Navbar";
 import { Colours, Sizes } from "../util/constants";
+import languages from "../components/data/LanguageConstants";
 
 const About = () => {
   return (
@@ -29,6 +31,22 @@ const About = () => {
       </div>
 
       {Timeline}
+
+      <div css={styles.header}>
+        <Header text="Technologies" />
+      </div>
+
+      <div css={styles.languages}>
+        {languages.map((l) => (
+          <LanguageSquare key={l.label} label={l.label}>
+            <img src={l.icon} width={80} height={80} alt={l.label} />
+          </LanguageSquare>
+        ))}
+      </div>
+
+      <div css={styles.header}>
+        <Header text="Hobbies/Interests" />
+      </div>
 
       <Footer />
     </div>
@@ -59,6 +77,14 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: "10em 0",
+  }),
+  languages: css({
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
+    gridTemplateRows: "1fr 1fr 1fr 1fr",
+    rowGap: "2rem",
+    justifyItems: "center",
+    padding: "1rem 1rem",
   }),
 };
 
