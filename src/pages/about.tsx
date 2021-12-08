@@ -8,6 +8,7 @@ import HelmetWrapper from "../components/HelmetWrapper";
 import Navbar from "../components/Navbar";
 import { Colours, Sizes } from "../util/constants";
 import languages from "../components/data/LanguageConstants";
+import Game from "../components/Game";
 
 const About = () => {
   return (
@@ -45,7 +46,32 @@ const About = () => {
       </div>
 
       <div css={styles.header}>
-        <Header text="Hobbies/Interests" />
+        <Header text="More About Me" />
+      </div>
+
+      <div css={styles.more}>
+        <p>
+          I’ve always thought that someone’s website reveals a lot about them.
+          The colour scheme, layout, aesthetic and vibe of my website was all
+          designed and crafted by me and reflects who I am as both an engineer
+          and a person - so have a look inside my brain! Want to listen to some
+          Adam-certified beats while you’re here? Check out one of my playlists
+          on{" "}
+          <a
+            href="https://open.spotify.com/user/sholabex?si=32840151e110448c"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Spotify
+          </a>{" "}
+          to see what I like listening too.
+        </p>
+        <p>
+          Instead of giving you a boring list of hobbies and interests, I’ve
+          decided to make it a little interesting. Play the game below and guess
+          whether each statement about me is fact or cap. Let's see how you do!
+        </p>
+        <Game />
       </div>
 
       <Footer />
@@ -85,6 +111,17 @@ const styles = {
     rowGap: "2rem",
     justifyItems: "center",
     padding: "1rem 1rem",
+  }),
+  more: css({
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    width: "600px",
+    textAlign: "center",
+    margin: "0 auto",
+    fontSize: Sizes.large,
+    paddingBottom: "3rem",
   }),
 };
 
