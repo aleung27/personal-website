@@ -1,54 +1,47 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby";
+import { css } from "@emotion/react";
+import HelmetWrapper from "../components/HelmetWrapper";
+import { Sizes } from "../util/constants";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
+    <main css={styles.root}>
+      <HelmetWrapper />
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry{" "}
-        <span role="img" aria-label="Pensive emoji">
-          😔
-        </span>{" "}
-        we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
+      <h1 css={styles.heading}>Page not found</h1>
+      <div css={styles.text}>
+        <p>〰〰〰〰〰〰〰〰〰〰〰〰〰</p>
+        <p>Looked up and looked down</p>
+        <p>For the webpage of renown</p>
+        <p>404 not found</p>
+        <p>〰〰〰〰〰〰〰〰〰〰〰〰〰</p>
+      </div>
+      <Link to="/" style={{ fontSize: Sizes.med }}>
+        Go home
+      </Link>
     </main>
-  )
-}
+  );
+};
 
-export default NotFoundPage
+const styles = {
+  root: css({
+    color: "#232129",
+    padding: "0 1rem",
+    fontFamily: "-apple-system, Roboto, sans-serif, serif",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    height: "100vh",
+  }),
+  heading: css({
+    fontSize: Sizes.xl,
+  }),
+  text: css({
+    fontSize: Sizes.large,
+    margin: "3rem 0",
+  }),
+};
+
+export default NotFoundPage;
