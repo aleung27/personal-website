@@ -25,9 +25,7 @@ const NotFoundPage = () => {
 
 const styles = {
   root: css({
-    color: "#232129",
     padding: "0 1rem",
-    fontFamily: "-apple-system, Roboto, sans-serif, serif",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
