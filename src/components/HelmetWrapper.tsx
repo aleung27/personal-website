@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet";
+import favicon from "../images/favicon.ico";
 
 const HelmetWrapper = () => {
   const bodyCss = `body {
@@ -14,9 +15,9 @@ const HelmetWrapper = () => {
     <Helmet>
       <meta charSet="utf-8" />
       <meta name="author" content="Adam Leung" />
-      <title>Adam's Personal Website</title>
-      <link rel="canonical" href="http://mysite.com/example" />
-      <link rel="icon" href={""} />
+      <title>Adam Leung</title>
+      <link rel="canonical" href="https://adam-leung.com/" />
+      <link rel="icon" href={favicon} type="image/png" sizes="16x16" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
