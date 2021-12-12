@@ -69,19 +69,22 @@ export const Timeline = [
       with the physical side of products which is why I chose to do a double
       degree (although I'll probably end up working in software).
     </p>
-    <p>
-      I've been a part of a few clubs and societies through my time here
-      including being one of the founders for DogSoc, a society for dog owners
-      and lovers. Since the founding, we've expanded to over 200 members and
-      host weekly events which help bring our members (and their dogs) together.
-      I'm also an avid archery fan and played competitively for the Sydney
-      University Archery Club. I've also received a few scholarships and awards:
+    <div>
+      <p>
+        I've been a part of a few clubs and societies through my time here
+        including being one of the founders for DogSoc, a society for dog owners
+        and lovers. Since the founding, we've expanded to over 200 members and
+        host weekly events which help bring our members (and their dogs)
+        together. I'm also an avid archery fan and played competitively for the
+        Sydney University Archery Club. I've also received a few scholarships
+        and awards:
+      </p>
       <ul>
         <li>Engineering Leadership Scholarship</li>
         <li>Dean's List for Academic Excellence</li>
         <li>University of Sydney Academic Merit Prize</li>
         <li>Engineering Minor Prize</li>
       </ul>
-    </p>
+    </div>
   </TimeLinePanel>,
 ];
