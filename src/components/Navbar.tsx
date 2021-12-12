@@ -1,15 +1,12 @@
 //Navbar with three selectable links: 'Home', 'About' and 'Contact'.
 import { css } from "@emotion/react";
 import { Colours, Sizes } from "../util/constants";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Socials from "./atomic/Socials";
+import { useLocation } from "@reach/router";
 
 const Navbar = () => {
-  const [path, setPath] = useState<string>("");
-
-  useEffect(() => {
-    setPath(window.location.pathname);
-  }, [window.location.pathname]);
+  const location = useLocation();
 
   return (
     <>
@@ -20,7 +17,10 @@ const Navbar = () => {
           <a
             href="/"
             rel="noopener noreferrer"
-            css={[styles.a, path === "/" ? styles.selected : styles.unselected]}
+            css={[
+              styles.a,
+              location.pathname === "/" ? styles.selected : styles.unselected,
+            ]}
           >
             <span>Home</span>
           </a>
@@ -30,7 +30,9 @@ const Navbar = () => {
             rel="noopener noreferrer"
             css={[
               styles.a,
-              path === "/about" ? styles.selected : styles.unselected,
+              location.pathname === "/about"
+                ? styles.selected
+                : styles.unselected,
             ]}
           >
             <span>About</span>
@@ -41,7 +43,9 @@ const Navbar = () => {
             rel="noopener noreferrer"
             css={[
               styles.a,
-              path === "/blog" ? styles.selected : styles.unselected,
+              location.pathname === "/blog"
+                ? styles.selected
+                : styles.unselected,
             ]}
           >
             <span>Blog</span>
