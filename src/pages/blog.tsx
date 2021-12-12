@@ -12,7 +12,7 @@ const Blog = () => {
 
       <div css={styles.root}>
         <div>
-          I write my thoughts, programming or otherwise on{" "}
+          I write my thoughts, programming or otherwise, on{" "}
           <a
             href="https://medium.com/@aleung27"
             target="_blank"

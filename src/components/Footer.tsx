@@ -45,11 +45,13 @@ const styles = {
   uptext: css({
     color: Colours.gray4,
     fontSize: Sizes.med,
-    transition: "margin 1s ease",
+    position: "relative",
+    top: 0,
+    transition: "top 1s ease",
     "&:hover": {
-      marginBottom: "1em",
       color: Colours.black,
       cursor: "pointer",
+      top: "-0.5em",
     },
   }),
 };
