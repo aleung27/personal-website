@@ -24,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "devicon": "^2.14.0",
+    "facepaint": "^1.2.1",
     "gatsby": "^3.10.2",
     "gatsby-plugin-emotion": "^6.10.0",
     "gatsby-plugin-fontawesome-css": "^1.1.0",
