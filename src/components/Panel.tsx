@@ -7,7 +7,8 @@ interface Props {
   title: string;
   subtitle: string;
   tags: string[];
-  images: string[];
+  image: string;
+  caption: string;
   descriptionHeading?: string;
   links?: JSX.Element[];
   children: React.ReactNode;
@@ -18,7 +19,8 @@ const Panel = ({
   title,
   subtitle,
   tags,
-  images,
+  image,
+  caption,
   descriptionHeading,
   links,
   children,
@@ -28,9 +30,7 @@ const Panel = ({
     <div css={styles.panel(display)}>
       {display === "column" && (
         <div css={[styles.images, styles.columnImage]}>
-          {images.map((i) => (
-            <ImageCard image={i} key={i} />
-          ))}
+          <ImageCard image={image} caption={caption} />
         </div>
       )}
       <div css={styles.information}>
@@ -51,9 +51,7 @@ const Panel = ({
       </div>
       {display === "row" && (
         <div css={styles.images}>
-          {images.map((i) => (
-            <ImageCard image={i} key={i} />
-          ))}
+          <ImageCard image={image} caption={caption} />
         </div>
       )}
     </div>
@@ -79,7 +77,6 @@ const styles = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    fontweight: "bold",
     fontSize: Sizes.xxl,
   }),
   subtitle: css({
