@@ -38,6 +38,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/facepaint": "^1.2.2",
     "@types/react-helmet": "^6.1.4"
   }
 }
