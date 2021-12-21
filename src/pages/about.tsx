@@ -9,12 +9,15 @@ import Navbar from "../components/Navbar";
 import { Colours, Sizes } from "../util/constants";
 import languages from "../components/data/LanguageConstants";
 import Game from "../components/Game";
+import { useState } from "react";
 
 const About = () => {
+  const [isFixed, setIsFixed] = useState<boolean>(false);
+
   return (
     <div>
-      <HelmetWrapper />
-      <Navbar />
+      <HelmetWrapper fixed={isFixed} />
+      <Navbar setIsFixed={setIsFixed} />
 
       <div css={styles.intro}>
         <Profile />

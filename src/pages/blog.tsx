@@ -3,12 +3,15 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { css } from "@emotion/react";
 import { Sizes } from "../util/constants";
+import { useState } from "react";
 
 const Blog = () => {
+  const [isFixed, setIsFixed] = useState<boolean>(false);
+
   return (
     <div>
-      <HelmetWrapper />
-      <Navbar />
+      <HelmetWrapper fixed={isFixed} />
+      <Navbar setIsFixed={setIsFixed} />
 
       <div css={styles.root}>
         <div>

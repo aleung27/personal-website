@@ -6,7 +6,7 @@ import { Sizes } from "../util/constants";
 const NotFoundPage = () => {
   return (
     <main css={styles.root}>
-      <HelmetWrapper />
+      <HelmetWrapper fixed={false} />
       <title>Not found</title>
       <h1 css={styles.heading}>Page not found</h1>
       <div css={styles.text}>

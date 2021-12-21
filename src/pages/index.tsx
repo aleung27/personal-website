@@ -1,3 +1,4 @@
+import { useState } from "react";
 import HelmetWrapper from "../components/HelmetWrapper";
 import Navbar from "../components/Navbar";
 import Profile from "../components/atomic/Profile";
@@ -10,10 +11,12 @@ import { Portfolio, Projects } from "../components/data/PanelConstants";
 import Footer from "../components/Footer";
 
 const Index = () => {
+  const [isFixed, setIsFixed] = useState<boolean>(false);
+
   return (
     <div>
-      <HelmetWrapper />
-      <Navbar />
+      <HelmetWrapper fixed={isFixed} />
+      <Navbar setIsFixed={setIsFixed} />
 
       <div css={styles.intro}>
         <div css={styles.introMain}>

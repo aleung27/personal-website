@@ -1,7 +1,11 @@
 import { Helmet } from "react-helmet";
 import favicon from "../images/favicon.ico";
 
-const HelmetWrapper = () => {
+interface Props {
+  fixed: boolean;
+}
+
+const HelmetWrapper = ({ fixed }: Props) => {
   const bodyCss = `body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -9,6 +13,13 @@ const HelmetWrapper = () => {
     font-weight: 400;
     background-color: #fbfbf8;
     color: #000000;
+    overflow: ${fixed ? "hidden" : "initial"};
+  }`;
+
+  const htmlCss = `html {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
   }`;
 
   return (
@@ -27,6 +38,7 @@ const HelmetWrapper = () => {
       />
 
       <style>{bodyCss}</style>
+      {fixed && <style>{htmlCss}</style>}
     </Helmet>
   );
 };
