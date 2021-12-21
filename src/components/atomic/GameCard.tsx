@@ -100,7 +100,6 @@ const styles = {
       height: "300px",
       backgroundColor: Colours.gray1,
       boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
-      backdropFilter: "blur(15px)",
       borderRadius: "32px",
       "&:before": {
         boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
