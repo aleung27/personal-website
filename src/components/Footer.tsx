@@ -3,18 +3,19 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Colours, Sizes } from "../util/constants";
 import Socials from "./atomic/Socials";
+import { breakpoints } from "../util/constants";
 
 const Footer = () => {
   return (
     <div css={styles.footer}>
-      <span css={styles.copyright}>&#169; 2021 Adam Leung</span>
+      <div css={styles.copyright}>&#169; 2021 Adam Leung</div>
       <div
         css={styles.uptext}
         onClick={() => window.scroll({ top: 0, left: 0, behavior: "smooth" })}
       >
         Take me back up <FontAwesomeIcon icon={faChevronUp} />
       </div>
-      <Socials style={css({ paddingRight: "3rem" })} />
+      <Socials style={styles.socials} />
     </div>
   );
 };
@@ -37,23 +38,36 @@ const styles = {
       zIndex: -1,
     },
   }),
-  copyright: css({
-    fontSize: Sizes.med,
-    color: Colours.gray4,
-    paddingLeft: "3rem",
-  }),
-  uptext: css({
-    color: Colours.gray4,
-    fontSize: Sizes.med,
-    position: "relative",
-    top: 0,
-    transition: "top 1s ease",
-    "&:hover": {
-      color: Colours.black,
-      cursor: "pointer",
-      top: "-0.5em",
-    },
-  }),
+  copyright: css(
+    breakpoints({
+      fontSize: Sizes.med,
+      color: Colours.gray4,
+      paddingLeft: ["0", "1rem", "3rem", "3rem"],
+      textAlign: ["center", "initial", "initial", "initial"],
+      width: ["100%", "auto", "auto", "auto"],
+    })
+  ),
+  socials: css(
+    breakpoints({
+      display: ["none", "initial", "initial", "initial"],
+      paddingRight: ["0", "1rem", "3rem", "3rem"],
+    })
+  ),
+  uptext: css(
+    breakpoints({
+      display: ["none", "initial", "initial", "initial"],
+      color: Colours.gray4,
+      fontSize: Sizes.med,
+      position: "relative",
+      top: 0,
+      transition: "top 1s ease",
+      "&:hover": {
+        color: Colours.black,
+        cursor: "pointer",
+        top: "-0.5em",
+      },
+    })
+  ),
 };
 
 export default Footer;

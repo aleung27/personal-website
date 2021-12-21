@@ -2,7 +2,7 @@ import HelmetWrapper from "../components/HelmetWrapper";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { css } from "@emotion/react";
-import { Sizes } from "../util/constants";
+import { breakpoints, Sizes } from "../util/constants";
 import { useState } from "react";
 
 const Blog = () => {
@@ -34,16 +34,18 @@ const Blog = () => {
 };
 
 const styles = {
-  root: css({
-    height: "90vh",
-    textAlign: "center",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    fontSize: Sizes.large,
-    margin: "0 1rem",
-  }),
+  root: css(
+    breakpoints({
+      height: ["80vh", "80vh", "80vh", "90vh"],
+      textAlign: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      fontSize: Sizes.large,
+      margin: "0 1rem",
+    })
+  ),
 };
 
 export default Blog;
