@@ -14,6 +14,7 @@ import bv from "../../images/bv-web.png";
 import bvMobile from "../../images/bv-mob.png";
 import vlc from "../../images/vlc.png";
 import vs from "../../images/vs-statuses.png";
+import atr from "../../images/atr.png";
 
 const styles = {
   a: css({
@@ -168,8 +169,8 @@ export const Portfolio = [
     title="ATR Core"
     subtitle="Accenture Australia"
     tags={["Web App", "API", "React", "TypeScript", "Java"]}
-    image={bv} // TODO: Update image
-    caption="Health check page for ATR Core showing the current status and resolution steps"
+    image={atr}
+    caption="Health check page indicating the current status and resolution steps"
     descriptionHeading="Bespoke Platform for Ticket Automation"
     display="row"
     links={[
