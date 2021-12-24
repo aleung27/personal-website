@@ -1,6 +1,6 @@
 import { css, keyframes } from "@emotion/react";
 import React, { useState, useEffect } from "react";
-import { Colours, Sizes } from "../../util/constants";
+import { Colours, Sizes, breakpoints } from "../../util/constants";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -168,17 +168,20 @@ const styles = {
     height: "100%",
     top: "0",
   }),
-  btn: css({
-    position: "relative",
-    height: "100%",
-    width: "50%",
-    border: "none",
-    padding: "0",
-    cursor: "pointer",
-    transition: "opacity 0.5s ease-in-out",
-    fontSize: Sizes.large,
-    fontWeight: 500,
-  }),
+  btn: css(
+    breakpoints({
+      display: ["none", "initial", "initial", "initial"],
+      position: "relative",
+      height: "100%",
+      width: "50%",
+      border: "none",
+      padding: "0",
+      cursor: "pointer",
+      transition: "opacity 0.5s ease-in-out",
+      fontSize: Sizes.large,
+      fontWeight: 500,
+    })
+  ),
   leftBtn: css({
     borderTopLeftRadius: "32px",
     borderBottomLeftRadius: "32px",
