@@ -1,9 +1,13 @@
-import { css } from "@emotion/react";
+import { css, SerializedStyles } from "@emotion/react";
 import { StaticImage } from "gatsby-plugin-image";
 
-const Profile = () => {
+interface Props {
+  style?: SerializedStyles;
+}
+
+const Profile = ({ style }: Props) => {
   return (
-    <div css={styles.profile}>
+    <div css={[styles.profile, style]}>
       <StaticImage
         src="../../images/profile.jpg"
         alt="profile picture"

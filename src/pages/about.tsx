@@ -20,7 +20,7 @@ const About = () => {
       <Navbar setIsFixed={setIsFixed} />
 
       <div css={styles.intro}>
-        <Profile />
+        <Profile style={styles.profile} />
         <span css={styles.title}>
           Want to learn more about me? You've come to the right place &#x1F604;
         </span>
@@ -93,13 +93,16 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    padding: "0 1rem",
+    textAlign: "center",
+  }),
+  profile: css({
+    marginTop: "calc(10vh + 2em)",
   }),
   title: css({
     fontSize: Sizes.xl,
     fontWeight: 500,
-    paddingTop: "3em",
-    paddingBottom: "0.5em",
+    padding: "1em 0",
   }),
   subtitle: css({
     fontSize: Sizes.med,
