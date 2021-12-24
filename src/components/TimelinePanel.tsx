@@ -67,6 +67,7 @@ const styles = {
       borderLeft: logoPos === "left" ? `1px dashed ${Colours.gray4}` : "",
       paddingTop: "1rem",
       paddingBottom: "1rem",
+      textAlign: logoPos === "left" ? "left" : "right",
     }),
   title: css({
     fontSize: Sizes.xl,

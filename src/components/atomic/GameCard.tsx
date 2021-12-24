@@ -22,8 +22,9 @@ const GameCard = ({
   removeOneShadow,
 }: Props) => {
   const [chosen, setChosen] = useState<boolean>();
-
   const [ok, setOk] = useState<boolean>(false);
+  const [touchStart, setTouchStart] = useState<number | undefined>(undefined);
+
   useEffect(() => {
     setTimeout(() => setOk(true), 100);
   }, [chosen]);
@@ -36,7 +37,23 @@ const GameCard = ({
             <span css={styles.heading}>True or False?</span>
             <p>{question}</p>
           </div>
-          <div css={styles.choices}>
+          <div
+            css={styles.choices}
+            onTouchStart={(e) => setTouchStart(e.changedTouches[0].pageX)}
+            onTouchEnd={(e) => {
+              if (touchStart) {
+                if (touchStart - e.changedTouches[0].pageX > 100) {
+                  if (answer) setScore((s) => s + 1);
+                  setChosen(true);
+                  setOk(false);
+                } else if (e.changedTouches[0].pageX - touchStart > 100) {
+                  if (!answer) setScore((s) => s + 1);
+                  setChosen(false);
+                  setOk(false);
+                }
+              }
+            }}
+          >
             <button
               css={[styles.btn, styles.leftBtn]}
               onClick={() => {

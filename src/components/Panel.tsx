@@ -91,7 +91,9 @@ const styles = {
   description: css({
     fontSize: Sizes.med,
   }),
-  images: css({}),
+  images: css({
+    maxWidth: "40vw",
+  }),
   columnImage: css({ paddingBottom: "5em" }),
 };
 

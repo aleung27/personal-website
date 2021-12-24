@@ -6,7 +6,7 @@ import { Timeline } from "../components/data/TimeLineConstants";
 import Footer from "../components/Footer";
 import HelmetWrapper from "../components/HelmetWrapper";
 import Navbar from "../components/Navbar";
-import { Colours, Sizes } from "../util/constants";
+import { breakpoints, Colours, Sizes } from "../util/constants";
 import languages from "../components/data/LanguageConstants";
 import Game from "../components/Game";
 import { useState } from "react";
@@ -74,6 +74,11 @@ const About = () => {
           decided to make it a little interesting. Play the game below and guess
           whether each statement about me is fact or cap. Let's see how you do!
         </p>
+        <p>
+          To play click on the right hand side of each card if you think the
+          answer is true otherwise click the left hand side. On mobile you can
+          swipe right and left instead.
+        </p>
         <Game />
       </div>
 
@@ -107,24 +112,31 @@ const styles = {
     justifyContent: "center",
     padding: "10em 0",
   }),
-  languages: css({
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
-    gridTemplateRows: "1fr 1fr 1fr 1fr",
-    rowGap: "2rem",
-    justifyItems: "center",
-    padding: "1rem 1rem",
-  }),
+  languages: css(
+    breakpoints({
+      display: "grid",
+      gridTemplateColumns: [
+        "1fr 1fr",
+        "1fr 1fr 1fr",
+        "1fr 1fr 1fr 1fr",
+        "1fr 1fr 1fr 1fr 1fr",
+      ],
+      gridTemplateRows: "1fr 1fr 1fr 1fr",
+      rowGap: "2rem",
+      justifyItems: "center",
+      padding: "1rem 1rem",
+    })
+  ),
   more: css({
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: "600px",
+    maxWidth: "600px",
     textAlign: "center",
     margin: "0 auto",
     fontSize: Sizes.large,
-    paddingBottom: "3rem",
+    padding: "0 1rem 3rem 1rem",
   }),
 };
 
