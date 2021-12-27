@@ -26,6 +26,33 @@ const HelmetWrapper = ({ fixed }: Props) => {
     <Helmet>
       <meta charSet="utf-8" />
       <meta name="author" content="Adam Leung" />
+      <meta
+        name="description"
+        content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia."
+      />
+
+      <meta property="og:title" content="Adam Leung" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://adam-leung.com" />
+      <meta
+        property="og:description"
+        content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia."
+      />
+
+      <meta
+        http-equiv="Content-Security-Policy"
+        content="
+        default-src 'self'; 
+        style-src 'self' 'unsafe-inline' fonts.googleapis.com fonts.gstatic.com; 
+        font-src 'self' data: fonts.gstatic.com;
+        img-src 'self' data:; 
+        frame-src 'self';
+        media-src 'self';
+        script-src 'self' 'unsafe-inline' 'unsafe-eval';
+        connect-src 'self' localhost:*;
+        "
+      />
+
       <title>Adam Leung</title>
       <link rel="canonical" href="https://adam-leung.com/" />
       <link rel="icon" href={favicon} type="image/png" sizes="16x16" />
