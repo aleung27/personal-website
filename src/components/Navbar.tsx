@@ -107,7 +107,7 @@ const styles = {
       position: ["initial", "initial", "initial", "fixed"],
       top: 0,
       width: "100%",
-      height: "10vh",
+      height: "75px",
       display: "flex",
       flexDirection: "row",
       justifyContent: [
@@ -122,7 +122,7 @@ const styles = {
         content: '""',
         background: Colours.header,
         position: "absolute",
-        height: "10vh",
+        height: "75px",
         width: "100%",
         filter: `blur(50px)`,
         zIndex: -1,
