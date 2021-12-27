@@ -8,37 +8,46 @@ const NotFoundPage = () => {
     <main css={styles.root}>
       <HelmetWrapper fixed={false} />
       <title>Not found</title>
-      <h1 css={styles.heading}>Page not found</h1>
-      <div css={styles.text}>
-        <p>〰〰〰〰〰〰〰〰〰〰〰〰〰</p>
-        <p>Looked up and looked down</p>
-        <p>For the webpage of renown</p>
-        <p>404 not found</p>
-        <p>〰〰〰〰〰〰〰〰〰〰〰〰〰</p>
+      <div>
+        <h1 css={styles.heading}>Page not found</h1>
+        <div css={styles.text}>
+          〰〰〰〰〰〰〰〰〰〰〰〰〰
+          <br />
+          Looked up and looked down
+          <br />
+          For the webpage of renown
+          <br />
+          404 not found
+          <br />
+          〰〰〰〰〰〰〰〰〰〰〰〰〰
+        </div>
+        <Link to="/" css={styles.link}>
+          Go home
+        </Link>
       </div>
-      <Link to="/" style={{ fontSize: Sizes.med }}>
-        Go home
-      </Link>
     </main>
   );
 };
 
 const styles = {
   root: css({
-    padding: "0 1rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
     height: "100vh",
+    width: "100%",
   }),
   heading: css({
     fontSize: Sizes.xl,
   }),
   text: css({
     fontSize: Sizes.large,
-    margin: "3rem 0",
+    padding: "1em 0",
+  }),
+  link: css({
+    fontSize: Sizes.med,
   }),
 };
 
