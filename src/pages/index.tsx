@@ -5,7 +5,7 @@ import Profile from "../components/atomic/Profile";
 import { css } from "@emotion/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { Colours, Sizes } from "../util/constants";
+import { breakpoints, Colours, Sizes } from "../util/constants";
 import Header from "../components/atomic/Header";
 import { Portfolio, Projects } from "../components/data/PanelConstants";
 import Footer from "../components/Footer";
@@ -66,25 +66,36 @@ const Index = () => {
 };
 
 const styles = {
-  intro: css({
-    fontSize: Sizes.large,
-    height: "100vh",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  }),
-  introMain: css({
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-  }),
-  introBio: css({
-    maxWidth: "30vw",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-  }),
+  intro: css(
+    breakpoints({
+      fontSize: Sizes.large,
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      padding: ["0 1rem", "0 1rem", "0 1rem", "15vh 1rem"],
+    })
+  ),
+  introMain: css(
+    breakpoints({
+      display: "grid",
+      gridTemplateColumns: ["1fr", "1fr 1fr", "1fr 1fr", "1fr 1fr"],
+      gridTemplateRows: ["1fr 1fr", "1fr", "1fr", "1fr"],
+      justifyItems: "center",
+      alignItems: "center",
+    })
+  ),
+  introBio: css(
+    breakpoints({
+      maxWidth: "400px",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      padding: "1rem 0rem",
+      gridRow: ["2", "1", "1", "1"],
+      justifySelf: ["center", "flex-end", "flex-end", "flex-end"],
+      textAlign: ["center", "initial", "initial", "initial"],
+    })
+  ),
   header: css({
     display: "flex",
     flexDirection: "row",
