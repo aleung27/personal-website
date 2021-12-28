@@ -17,6 +17,9 @@ const About = () => {
   return (
     <div>
       <HelmetWrapper fixed={isFixed} />
+      {/*
+        //@ts-ignore */}
+      <ct></ct>
       <Navbar setIsFixed={setIsFixed} />
 
       <div css={styles.intro}>

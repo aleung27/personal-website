@@ -7,6 +7,9 @@ const NotFoundPage = () => {
   return (
     <main css={styles.root}>
       <HelmetWrapper fixed={false} />
+      {/*
+        //@ts-ignore */}
+      <ct></ct>
       <title>Not found</title>
       <div>
         <h1 css={styles.heading}>Page not found</h1>

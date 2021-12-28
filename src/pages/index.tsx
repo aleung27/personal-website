@@ -16,8 +16,10 @@ const Index = () => {
   return (
     <div>
       <HelmetWrapper fixed={isFixed} />
+      {/*
+        //@ts-ignore */}
+      <ct></ct>
       <Navbar setIsFixed={setIsFixed} />
-
       <div css={styles.intro}>
         <div css={styles.introMain}>
           <div css={styles.introBio}>
@@ -43,19 +45,14 @@ const Index = () => {
           Take a peek into my life below <FontAwesomeIcon icon={faArrowDown} />
         </span>
       </div>
-
       <div css={styles.header}>
         <Header text="Professional Portfolio" />
       </div>
-
       {Portfolio}
-
       <div css={styles.header}>
         <Header text="Personal Projects" />
       </div>
-
       <div css={styles.project}>{Projects}</div>
-
       <div css={styles.ending}>
         Want to read more? Check out some of my{" "}
         <a href="/blog" target="_self" rel="noopener noreferrer external">
@@ -63,7 +60,6 @@ const Index = () => {
         </a>{" "}
         posts too!
       </div>
-
       <Footer />
     </div>
   );
