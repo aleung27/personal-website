@@ -32,7 +32,7 @@ const Socials = ({ style }: Props) => {
       </a>
 
       <a
-        href="https://www.linkedin.com/in/adam-leung-ba5796182"
+        href="https://www.linkedin.com/in/ajleung"
         target="_blank"
         rel="noopener noreferrer external"
         css={styles.a}
