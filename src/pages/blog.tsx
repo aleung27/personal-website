@@ -39,7 +39,12 @@ const Blog = () => {
 const styles = {
   root: css(
     breakpoints({
-      height: ["80vh", "80vh", "80vh", "90vh"],
+      height: [
+        "calc(100vh - 150px)",
+        "calc(100vh - 150px)",
+        "calc(100vh - 150px)",
+        "calc(100vh - 75px)",
+      ],
       textAlign: "center",
       display: "flex",
       flexDirection: "column",
