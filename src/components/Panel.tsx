@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Colours, Sizes } from "../util/constants";
+import { Colours, Sizes, breakpoints } from "../util/constants";
 import ImageCard from "./atomic/ImageCard";
 import Tag from "./atomic/Tag";
 
@@ -28,17 +28,14 @@ const Panel = ({
 }: Props) => {
   return (
     <div css={styles.panel(display)}>
-      {display === "column" && (
-        <div css={[styles.images, styles.columnImage]}>
-          <ImageCard image={image} caption={caption} />
-        </div>
-      )}
-      <div css={styles.information}>
+      <div css={styles.information(display)}>
         <div css={styles.title}>
           {title}
-          {tags.map((t) => (
-            <Tag tag={t} key={t} />
-          ))}
+          <div css={styles.tags}>
+            {tags.map((t) => (
+              <Tag tag={t} key={t} />
+            ))}
+          </div>
         </div>
         <div css={styles.subtitle}>
           {subtitle}
@@ -49,36 +46,59 @@ const Panel = ({
         )}
         <div css={styles.description}>{children}</div>
       </div>
-      {display === "row" && (
-        <div css={styles.images}>
-          <ImageCard image={image} caption={caption} />
-        </div>
-      )}
+      <div css={styles.images(display)}>
+        <ImageCard image={image} caption={caption} />
+      </div>
     </div>
   );
 };
 
 const styles = {
   panel: (display: "column" | "row") =>
-    css({
-      padding: "2em 0",
+    css(
+      breakpoints({
+        padding: "2em 1rem",
+        display: "flex",
+        flexDirection: [
+          "column-reverse",
+          "column-reverse",
+          "column-reverse",
+          display === "column" ? "column-reverse" : "row",
+        ],
+        alignItems: "center",
+        justifyContent: [
+          "flex-end",
+          "flex-end",
+          "flex-end",
+          display === "column" ? "flex-end" : "space-evenly",
+        ],
+      })
+    ),
+  information: (display: "column" | "row") =>
+    css(
+      breakpoints({
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        padding: "0 2rem",
+        width: ["100%", "100%", "100%", display === "column" ? "100%" : "50%"],
+      })
+    ),
+  title: css(
+    breakpoints({
       display: "flex",
-      flexDirection: display,
-      alignItems: "center",
-      justifyContent: "space-evenly",
-    }),
-  information: css({
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    maxWidth: "40vw",
-  }),
-  title: css({
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    fontSize: Sizes.xxl,
-  }),
+      flexDirection: ["column", "column", "row", "column"],
+      alignItems: ["flex-start", "flex-start", "center", "flex-start"],
+      fontSize: Sizes.xxl,
+    })
+  ),
+  tags: css(
+    breakpoints({
+      display: ["none", "flex", "flex", "flex"],
+      paddingBottom: ["0", "0.5em", "0", "0.5em"],
+      paddingLeft: ["0", "0", "10px", "0"],
+    })
+  ),
   subtitle: css({
     fontWeight: 300,
     fontSize: Sizes.large,
@@ -91,10 +111,13 @@ const styles = {
   description: css({
     fontSize: Sizes.med,
   }),
-  images: css({
-    maxWidth: "40vw",
-  }),
-  columnImage: css({ paddingBottom: "5em" }),
+  images: (display: "column" | "row") =>
+    css(
+      breakpoints({
+        width: ["100%", "100%", "100%", display === "column" ? "100%" : "50%"],
+        padding: "1rem 0",
+      })
+    ),
 };
 
 export default Panel;

@@ -48,7 +48,7 @@ const Index = () => {
       <div css={styles.header}>
         <Header text="Professional Portfolio" />
       </div>
-      {Portfolio}
+      <div style={{ padding: "0 1rem" }}>{Portfolio}</div>
       <div css={styles.header}>
         <Header text="Personal Projects" />
       </div>
@@ -102,16 +102,20 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: "10em 0",
+    overflowX: "clip",
   }),
-  project: css({
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr",
-  }),
+  project: css(
+    breakpoints({
+      display: "grid",
+      gridTemplateColumns: ["1fr", "1fr", "1fr", "1fr 1fr"],
+      padding: "0 1rem",
+    })
+  ),
   ending: css({
     textAlign: "center",
     fontWeight: 400,
     fontSize: Sizes.large,
-    padding: "5em 0",
+    padding: "5em 1rem",
   }),
 };
 

@@ -4,20 +4,14 @@ import { Colours, Sizes } from "../../util/constants";
 
 interface Props {
   image: string;
-  width?: number;
   caption: string;
 }
 
-const ImageCard = ({ image, width, caption }: Props) => {
+const ImageCard = ({ image, caption }: Props) => {
   return (
     <>
-      <div css={[styles.imagecard(width)]}>
-        <img
-          src={image}
-          alt="ImageCard"
-          width={width}
-          css={styles.image(width)}
-        />
+      <div css={[styles.imagecard]}>
+        <img src={image} alt="ImageCard" css={styles.image} />
       </div>
       <div css={styles.caption}>{caption}</div>
     </>
@@ -25,23 +19,20 @@ const ImageCard = ({ image, width, caption }: Props) => {
 };
 
 const styles = {
-  imagecard: (width: number | undefined) =>
-    css({
-      borderRadius: "32px",
-      width: width ? `${width}px` : "auto",
-      maxWidth: `40vw`,
-      position: "relative",
-      boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.25)",
-    }),
-  image: (width: number | undefined) =>
-    css({
-      display: "block",
-      filter: "brightness(100%)",
-      borderRadius: "32px",
-      width: width ? `${width}px` : "auto",
-      maxWidth: `40vw`,
-      height: "100%",
-    }),
+  imagecard: css({
+    borderRadius: "32px",
+    width: "auto",
+    maxWidth: "100%",
+    position: "relative",
+    boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.25)",
+  }),
+  image: css({
+    display: "block",
+    filter: "brightness(100%)",
+    borderRadius: "32px",
+    width: "100%",
+    height: "100%",
+  }),
   caption: css({
     textAlign: "center",
     padding: "1em 0",

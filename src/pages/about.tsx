@@ -117,6 +117,7 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     padding: "10em 0",
+    overflowX: "clip",
   }),
   languages: css(
     breakpoints({
