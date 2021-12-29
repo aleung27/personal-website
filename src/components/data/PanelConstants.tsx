@@ -19,7 +19,7 @@ import atr from "../../images/atr.png";
 const styles = {
   a: css({
     color: Colours.gray4,
-    margin: "0 0.5rem",
+    margin: "0 5px",
     "&:hover": {
       color: Colours.black,
     },
@@ -242,8 +242,17 @@ export const Projects = [
     subtitle="VideoLAN Organisation"
     tags={["Desktop", "C++", "Qt"]}
     image={vlc}
-    caption="New setup wizard for VLC 4.0 with colour scheme choices!"
+    caption="First run wizard for VLC 4.0 with colour scheme choices"
     links={[
+      <a
+        href="https://summerofcode.withgoogle.com/archive/2021/projects/5748007382810624"
+        target="_blank"
+        rel="noopener noreferrer external"
+        css={styles.a}
+        key={2}
+      >
+        <FontAwesomeIcon icon={faLink} size="xs" />
+      </a>,
       <a
         href="https://code.videolan.org/aleung27"
         target="_blank"
@@ -288,7 +297,7 @@ export const Projects = [
     subtitle="Visual Studio Code"
     tags={["Extension", "API", "Typescript"]}
     image={vs}
-    caption="VS Statuses extension shown in the panel to the left"
+    caption="VS Statuses extension shown in the left panel"
     links={[
       <a
         href="https://marketplace.visualstudio.com/items?itemName=aleung27.vs-statuses"

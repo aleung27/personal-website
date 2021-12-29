@@ -15,7 +15,7 @@ const styles = {
     backgroundColor: Colours.gray2,
     borderRadius: "8px",
     padding: "5px 10px",
-    margin: "0 5px",
+    marginRight: "10px",
     fontSize: Sizes.small,
   }),
 };
