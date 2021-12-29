@@ -33,6 +33,7 @@ const styles = {
         zIndex: -1,
         transform: "translateY(calc(-50% + 24px))",
       },
+      padding: "0 1rem",
     }),
 };
 
