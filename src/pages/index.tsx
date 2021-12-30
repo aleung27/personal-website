@@ -14,7 +14,7 @@ const Index = () => {
   const [isFixed, setIsFixed] = useState<boolean>(false);
 
   return (
-    <div>
+    <div css={styles.root}>
       <HelmetWrapper fixed={isFixed} />
       {/*
         //@ts-ignore */}
@@ -66,6 +66,9 @@ const Index = () => {
 };
 
 const styles = {
+  root: css({
+    overflowX: "hidden",
+  }),
   intro: css(
     breakpoints({
       fontSize: Sizes.large,

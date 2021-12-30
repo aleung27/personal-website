@@ -15,7 +15,7 @@ const About = () => {
   const [isFixed, setIsFixed] = useState<boolean>(false);
 
   return (
-    <div>
+    <div css={styles.root}>
       <HelmetWrapper fixed={isFixed} />
       {/*
         //@ts-ignore */}
@@ -91,6 +91,9 @@ const About = () => {
 };
 
 const styles = {
+  root: css({
+    overflowX: "hidden",
+  }),
   intro: css({
     display: "flex",
     flexDirection: "column",
