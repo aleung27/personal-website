@@ -26,7 +26,6 @@
     "devicon": "^2.14.0",
     "facepaint": "^1.2.1",
     "gatsby": "^4.4.0",
-    "gatsby-optional-chaining": "^1.0.1",
     "gatsby-plugin-emotion": "^7.4.0",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-html-comments": "^1.0.0",
