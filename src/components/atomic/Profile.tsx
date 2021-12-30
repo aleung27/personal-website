@@ -29,6 +29,8 @@ const styles = {
   image: css({
     height: "100%",
     width: "auto",
+    borderRadius: "50%",
+    objectFit: "contain",
   }),
 };
 
