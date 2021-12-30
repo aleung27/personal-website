@@ -53,7 +53,7 @@ const HelmetWrapper = ({ fixed }: Props) => {
         "
       />
 
-      <title>Adam Leung</title>
+      <title>Adam Leung - Software Engineer | Personal Website</title>
       <link rel="canonical" href="https://adam-leung.com/" />
       <link rel="icon" href={favicon} type="image/png" sizes="16x16" />
 
