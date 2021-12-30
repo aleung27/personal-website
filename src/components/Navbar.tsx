@@ -7,7 +7,6 @@ import { useLocation } from "@reach/router";
 import { breakpoints } from "../util/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import scrollTo from "gatsby-plugin-smoothscroll";
 
 interface Props {
   setIsFixed: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,38 +15,11 @@ interface Props {
 const Navbar = ({ setIsFixed }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const smoothScroll = () => {
-    scrollTo("#gatsby-focus-wrapper");
-
-    return new Promise((resolve, reject) => {
-      const failed = setTimeout(() => {
-        reject();
-      }, 500);
-
-      const success = () => {
-        if (window.scrollY === 0) {
-          window.removeEventListener("scroll", success);
-          resolve(true);
-        }
-      };
-
-      if (window.scrollY === 0) {
-        clearTimeout(failed);
-        resolve(true);
-      } else {
-        window.addEventListener("scroll", success);
-      }
-    });
-  };
-
   return (
     <>
       <nav css={styles.navbar}>
         <button
-          onClick={async () => {
-            try {
-              await smoothScroll();
-            } catch {}
+          onClick={() => {
             setIsOpen(true);
             setIsFixed(true);
           }}
@@ -235,11 +207,11 @@ const styles = {
         flexDirection: "row",
         justifyContent: "flex-end",
         width: "100%",
-        position: "absolute",
+        position: "fixed",
         top: "0",
         zIndex: "100",
         left: isOpen ? "0px" : "-100%",
-        height: "100vh",
+        height: "100%",
         transition: "left 0.5s ease-in-out",
       })
     ),
