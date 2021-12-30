@@ -79,8 +79,8 @@ const About = () => {
         </p>
         <p>
           To play click on the right hand side of each card if you think the
-          answer is true otherwise click the left hand side. On mobile you can
-          swipe right and left instead.
+          answer is true otherwise click the left hand side. On mobile swipe
+          right and left instead.
         </p>
         <Game />
       </div>

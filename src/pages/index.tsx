@@ -30,7 +30,7 @@ const Index = () => {
               Nice to meet you and welcome to my website! I’m Adam Leung -
               Sydney based Full Stack Software Engineer, Uni Student @ USYD and
               much more. Interested in a chat? Feel free to reach out through
-              one of those handy buttons at the top &#x1F604;
+              one of those handy buttons in the navbar &#x1F604;
             </p>
           </div>
           <Profile />

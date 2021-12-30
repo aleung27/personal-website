@@ -43,12 +43,12 @@ const GameCard = ({
             onTouchEnd={(e) => {
               if (touchStart) {
                 if (touchStart - e.changedTouches[0].pageX > 100) {
-                  if (answer) setScore((s) => s + 1);
-                  setChosen(true);
-                  setOk(false);
-                } else if (e.changedTouches[0].pageX - touchStart > 100) {
                   if (!answer) setScore((s) => s + 1);
                   setChosen(false);
+                  setOk(false);
+                } else if (e.changedTouches[0].pageX - touchStart > 100) {
+                  if (answer) setScore((s) => s + 1);
+                  setChosen(true);
                   setOk(false);
                 }
               }
@@ -168,20 +168,20 @@ const styles = {
     height: "100%",
     top: "0",
   }),
-  btn: css(
-    breakpoints({
-      display: ["none", "initial", "initial", "initial"],
-      position: "relative",
-      height: "100%",
-      width: "50%",
-      border: "none",
-      padding: "0",
-      cursor: "pointer",
-      transition: "opacity 0.5s ease-in-out",
-      fontSize: Sizes.large,
-      fontWeight: 500,
-    })
-  ),
+  btn: css({
+    position: "relative",
+    height: "100%",
+    width: "50%",
+    border: "none",
+    padding: "0",
+    cursor: "pointer",
+    transition: "opacity 0.5s ease-in-out",
+    fontSize: Sizes.large,
+    fontWeight: 500,
+    "@media (hover: none)": {
+      display: "none",
+    },
+  }),
   leftBtn: css({
     borderTopLeftRadius: "32px",
     borderBottomLeftRadius: "32px",
