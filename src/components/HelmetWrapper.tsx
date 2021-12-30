@@ -40,6 +40,11 @@ const HelmetWrapper = ({ fixed }: Props) => {
       />
 
       <meta
+        name="google-site-verification"
+        content="ehtowe-zi5bT-MvSiowhg5GMLBZqKFJMASv3Ej8tCgU"
+      />
+
+      <meta
         http-equiv="Content-Security-Policy"
         content="
         default-src 'self'; 
