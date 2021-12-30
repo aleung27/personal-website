@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Colours, Sizes } from "../util/constants";
 import Socials from "./atomic/Socials";
 import { breakpoints } from "../util/constants";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
       <div css={styles.copyright}>&#169; 2021 Adam Leung</div>
       <button
         css={styles.uptext}
-        onClick={() => window.scroll({ top: 0, left: 0, behavior: "smooth" })}
+        onClick={() => scrollTo("#gatsby-focus-wrapper")}
       >
         Take me back up <FontAwesomeIcon icon={faChevronUp} />
       </button>

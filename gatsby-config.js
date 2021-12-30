@@ -10,6 +10,7 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-fontawesome-css",
+    "gatsby-plugin-smoothscroll",
     {
       resolve: "gatsby-source-filesystem",
       options: {
