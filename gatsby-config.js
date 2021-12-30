@@ -70,7 +70,9 @@ module.exports = {
               return page.path === fileName;
             });
 
-            return { ...page, ...pageFile?.node?.fields };
+            if (pageFile && pageFile.node && pageFile.node.fields)
+              return { ...page, ...pageFile?.node?.fields };
+            else return { ...page };
           });
         },
         serialize: ({ path, gitLogLatestDate }) => {
