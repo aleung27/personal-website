@@ -12,7 +12,8 @@ const Profile = ({ style }: Props) => {
         src="../../images/profile.jpg"
         alt="profile picture"
         placeholder="blurred"
-        css={styles.image}
+        imgStyle={styles.image}
+        css={{ height: 300 }}
       />
     </div>
   );
@@ -24,14 +25,13 @@ const styles = {
     width: 300,
     height: 300,
     overflow: "hidden",
-    borderRadius: "50%",
   }),
-  image: css({
-    height: "100%",
-    width: "auto",
-    borderRadius: "50%",
-    objectFit: "contain",
-  }),
+  image: {
+    height: 300,
+    width: 300,
+    "object-fit": "cover",
+    "border-radius": "50%",
+  },
 };
 
 export default Profile;
