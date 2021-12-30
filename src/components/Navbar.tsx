@@ -239,7 +239,7 @@ const styles = {
         top: "0",
         zIndex: "100",
         left: isOpen ? "0px" : "-100%",
-        height: "100%",
+        height: "100vh",
         transition: "left 0.5s ease-in-out",
       })
     ),
