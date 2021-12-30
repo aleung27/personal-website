@@ -71,7 +71,7 @@ module.exports = {
             });
 
             if (pageFile && pageFile.node && pageFile.node.fields)
-              return { ...page, ...pageFile?.node?.fields };
+              return { ...page, ...pageFile.node.fields };
             else return { ...page };
           });
         },
