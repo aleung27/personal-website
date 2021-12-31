@@ -22,7 +22,7 @@ const Blog = () => {
           <a
             href="https://medium.com/@aleung27"
             target="_blank"
-            rel="noopener noreferrer external"
+            rel="noopener external"
           >
             Medium
           </a>

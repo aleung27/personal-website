@@ -68,7 +68,7 @@ const Links = () => {
     <>
       <a
         href="/"
-        rel="noopener noreferrer"
+        rel="noopener"
         css={[
           styles.a,
           location.pathname === "/" ? styles.selected : styles.unselected,
@@ -78,7 +78,7 @@ const Links = () => {
       </a>
       <a
         href="/about"
-        rel="noopener noreferrer"
+        rel="noopener"
         css={[
           styles.a,
           location.pathname === "/about/" ? styles.selected : styles.unselected,
@@ -88,7 +88,7 @@ const Links = () => {
       </a>
       <a
         href="/blog"
-        rel="noopener noreferrer"
+        rel="noopener"
         css={[
           styles.a,
           location.pathname === "/blog/" ? styles.selected : styles.unselected,

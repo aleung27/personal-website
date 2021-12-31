@@ -65,7 +65,7 @@ const About = () => {
           on{" "}
           <a
             href="https://open.spotify.com/user/sholabex?si=32840151e110448c"
-            rel="noopener noreferrer"
+            rel="noopener external"
             target="_blank"
           >
             Spotify

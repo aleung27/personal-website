@@ -55,7 +55,7 @@ const Index = () => {
       <div css={styles.project}>{Projects}</div>
       <div css={styles.ending}>
         Want to read more? Check out some of my{" "}
-        <a href="/blog" target="_self" rel="noopener noreferrer external">
+        <a href="/blog" target="_self">
           Blog
         </a>{" "}
         posts too!

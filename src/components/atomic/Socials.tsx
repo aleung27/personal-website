@@ -14,7 +14,7 @@ const Socials = ({ style }: Props) => {
       <a
         href="mailto:adamjleung123@gmail.com"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         data-tip="Email me at: adamjleung123@gmail.com"
       >
@@ -24,7 +24,7 @@ const Socials = ({ style }: Props) => {
       <a
         href="https://www.github.com/aleung27"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         data-tip="Visit my Github"
       >
@@ -34,7 +34,7 @@ const Socials = ({ style }: Props) => {
       <a
         href="https://www.linkedin.com/in/ajleung"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         data-tip="Visit my LinkedIn"
       >

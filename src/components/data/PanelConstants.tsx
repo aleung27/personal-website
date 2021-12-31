@@ -39,7 +39,7 @@ export const Portfolio = [
       <a
         href="https://builtview.com/"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={1}
       >
@@ -105,7 +105,7 @@ export const Portfolio = [
       <a
         href="https://apps.apple.com/us/app/builtview-mobile/id1560750101"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={1}
       >
@@ -114,7 +114,7 @@ export const Portfolio = [
       <a
         href="https://play.google.com/store/apps/details?id=com.builtview.mobile.dev"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={2}
       >
@@ -177,7 +177,7 @@ export const Portfolio = [
       <a
         href="https://www.accenture.com/au-en/services/applied-intelligence/mywizard-intelligent-automation-platform"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={1}
       >
@@ -247,7 +247,7 @@ export const Projects = [
       <a
         href="https://summerofcode.withgoogle.com/archive/2021/projects/5748007382810624"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={2}
       >
@@ -256,7 +256,7 @@ export const Projects = [
       <a
         href="https://code.videolan.org/aleung27"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={1}
       >
@@ -302,7 +302,7 @@ export const Projects = [
       <a
         href="https://marketplace.visualstudio.com/items?itemName=aleung27.vs-statuses"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={1}
       >
@@ -311,7 +311,7 @@ export const Projects = [
       <a
         href="https://github.com/aleung27/VS-Statuses"
         target="_blank"
-        rel="noopener noreferrer external"
+        rel="noopener external"
         css={styles.a}
         key={2}
       >
