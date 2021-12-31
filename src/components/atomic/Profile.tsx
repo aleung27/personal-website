@@ -11,7 +11,7 @@ const Profile = ({ style }: Props) => {
       <StaticImage
         src="../../images/profile.jpg"
         alt="profile picture"
-        placeholder="blurred"
+        placeholder="none"
         imgStyle={styles.image}
         css={{ height: 300 }}
       />
