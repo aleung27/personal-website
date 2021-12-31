@@ -22,7 +22,7 @@
 
 Howdy! Welcome to the repository for my personal website. I'm a software engineer currently based in Sydney and thought it would be fun to finally get a personal website up and running and now, a couple of months later, here we are!
 
-The site itself is built using TypeScript, React and Gatsby and is automatically deployed through Netlify whenever a new commit is pusher to `master`. This was my first foray in using Gatsby and I found it really fast and flexible - just as promised. Have a look around and feel free to reach out if you're interested in having a chat.
+The site itself is built using TypeScript, React and Gatsby and is automatically deployed through Netlify whenever a new commit is pushed to `master`. This was my first foray into the world of Gatsby and I found it really fast and flexible - just as promised. Have a look around and feel free to reach out if you're interested in having a chat.
 
 <https://www.adam-leung.com>
 
@@ -32,7 +32,7 @@ The site itself is built using TypeScript, React and Gatsby and is automatically
 
 2. Install `node` and `nvm` if they are not already present on your setup
 
-3. Change to the root directory of the repository and run `nvm use` to switch to the version of node specified in the `.nvmrc` file
+3. Navigate to the root directory of the repository and run `nvm use` to switch to the version of node specified in the `.nvmrc` file
 
 4. Run `npm i` to install all necessary dependencies
 
@@ -44,4 +44,4 @@ The site itself is built using TypeScript, React and Gatsby and is automatically
 
 It's my personal website - doubt you'll be submitting any PRs!
 
-Found a bug or got a suggestion though? Feel free to submit a new [Issue](https://github.com/aleung27/personal-website/issues)
+Found a bug or got a suggestion though? Feel free to submit a new [issue](https://github.com/aleung27/personal-website/issues)
