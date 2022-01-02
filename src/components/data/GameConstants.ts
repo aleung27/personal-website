@@ -9,7 +9,7 @@ const gameData = [
     question: "I ran a dropshipping business in my teens",
     answer: false,
     explainer:
-      "Was dropshipping even a thing then? I did have a side hustle reselling clothes though, those were good times",
+      "Never tried it! I did have a side hustle reselling clothes though, those were good times",
   },
   {
     question: "My first job was working retail",
@@ -27,7 +27,7 @@ const gameData = [
     question: "I prefer physical books to ebooks",
     answer: true,
     explainer:
-      "Who doesn't like the feel of paper over a Kindle? Although recently my booksheld has been overflowing a little...",
+      "Who doesn't like the feel of paper over a Kindle? Although recently my bookshelf has been overflowing a little...",
   },
   {
     question: "I'm a morning person",

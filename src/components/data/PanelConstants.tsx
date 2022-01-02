@@ -87,8 +87,10 @@ export const Portfolio = [
           into our state logic
         </li>
         <li style={{ margin: "0.5em 0" }}>
-          Database and model transitions from a one-to-many model to a
-          many-to-many schema with 0 data loss and downtime
+          Database and EF Core model transitions from a one-to-many schema to a
+          many-to-many schema as well as integration of a Table per Hierarchy
+          (TPH) backend infrastructure to leverage OOP concepts with 0 data loss
+          and downtime.
         </li>
       </ul>
     </div>
@@ -266,7 +268,7 @@ export const Projects = [
     display="column"
   >
     <p>
-      Open source has always been something that I have been interested in
+      Open source has always been something that I've been interested in
       participating in, with most of the world's technology being powered by
       OSS. Yet, the barrier to entry for contributing to an open source project
       has always seemed high. So I was delighted to see that Google's Summer of
