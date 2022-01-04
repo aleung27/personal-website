@@ -8,7 +8,7 @@ interface Props {
 const Header = ({ text }: Props) => {
   return (
     <div css={styles.header(`${text.length * 5}px`)}>
-      <span>{text}</span>
+      <h2 css={styles.content}>{text}</h2>
     </div>
   );
 };
@@ -35,6 +35,12 @@ const styles = {
       },
       padding: "0 1rem",
     }),
+  content: css({
+    display: "inline",
+    fontSize: Sizes.xxl,
+    fontWeight: 500,
+    margin: 0,
+  }),
 };
 
 export default Header;

@@ -30,7 +30,7 @@ const Panel = ({
     <div css={styles.panel(display)}>
       <div css={styles.information(display)}>
         <div css={styles.title}>
-          {title}
+          <h3 css={styles.heading}>{title}</h3>
           <div css={styles.tags}>
             {tags.map((t) => (
               <Tag tag={t} key={t} />
@@ -92,6 +92,12 @@ const styles = {
       fontSize: Sizes.xxl,
     })
   ),
+  heading: css({
+    display: "inline",
+    margin: 0,
+    fontSize: Sizes.xxl,
+    fontWeight: 400,
+  }),
   tags: css(
     breakpoints({
       display: ["none", "flex", "flex", "flex"],

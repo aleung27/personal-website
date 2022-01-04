@@ -27,7 +27,7 @@ const Navbar = ({ setIsFixed }: Props) => {
         >
           <FontAwesomeIcon icon={faBars} size="2x" />
         </button>
-        <span css={styles.title}>Adam Leung</span>
+        <h1 css={styles.title}>Adam Leung</h1>
 
         <div css={styles.modal(isOpen)}>
           <div css={styles.menu}>
@@ -141,8 +141,10 @@ const styles = {
   ),
   title: css(
     breakpoints({
+      display: "inline",
       fontWeight: "bold",
       fontSize: Sizes.large,
+      margin: "0",
       paddingLeft: ["0", "1rem", "3rem", "3rem"],
     })
   ),

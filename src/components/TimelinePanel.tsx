@@ -17,7 +17,7 @@ const TimeLinePanel = ({ title, subtitle, logo, logoPos, children }: Props) => {
       </div>
 
       <div css={styles.information(logoPos)}>
-        <div css={styles.title}>{title}</div>
+        <h3 css={styles.title}>{title}</h3>
         <div css={styles.subtitle}>{subtitle}</div>
         <div css={styles.children}>{children}</div>
       </div>
@@ -100,6 +100,7 @@ const styles = {
   title: css({
     fontSize: Sizes.xl,
     fontWeight: 700,
+    margin: 0,
     paddingBottom: "0.5em",
   }),
   subtitle: css({
