@@ -1,11 +1,14 @@
 import { Helmet } from "react-helmet";
 import favicon from "../images/favicon.ico";
+import { useLocation } from "@reach/router";
 
 interface Props {
   fixed: boolean;
 }
 
 const HelmetWrapper = ({ fixed }: Props) => {
+  const location = useLocation();
+
   const bodyCss = `body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -28,7 +31,7 @@ const HelmetWrapper = ({ fixed }: Props) => {
       <meta name="author" content="Adam Leung" />
       <meta
         name="description"
-        content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia."
+        content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia. Visit my website to learn more about me and get in contact!"
       />
 
       <meta property="og:title" content="Adam Leung" />
@@ -36,7 +39,7 @@ const HelmetWrapper = ({ fixed }: Props) => {
       <meta property="og:url" content="https://adam-leung.com" />
       <meta
         property="og:description"
-        content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia."
+        content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia. Visit my website to learn more about me and get in contact!"
       />
 
       <meta
@@ -59,7 +62,10 @@ const HelmetWrapper = ({ fixed }: Props) => {
       />
 
       <title>Adam Leung - Software Engineer | Personal Website</title>
-      <link rel="canonical" href="https://adam-leung.com/" />
+      <link
+        rel="canonical"
+        href={`https://adam-leung.com${location.pathname}`}
+      />
       <link rel="icon" href={favicon} type="image/png" sizes="16x16" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
