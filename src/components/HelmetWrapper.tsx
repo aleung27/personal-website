@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import favicon from "../images/favicon.ico";
 import { useLocation } from "@reach/router";
+import profile from "../images/profile.jpg";
 
 interface Props {
   fixed: boolean;
@@ -34,13 +35,17 @@ const HelmetWrapper = ({ fixed }: Props) => {
         content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia. Visit my website to learn more about me and get in contact!"
       />
 
-      <meta property="og:title" content="Adam Leung" />
+      <meta
+        property="og:title"
+        content="Adam Leung - Software Engineer | Personal Website"
+      />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://adam-leung.com" />
       <meta
         property="og:description"
         content="Adam Leung's personal website. Full stack developer and programmer based in Sydney, Australia. Visit my website to learn more about me and get in contact!"
       />
+      <meta property="og:image" content={profile} />
 
       <meta
         name="google-site-verification"
